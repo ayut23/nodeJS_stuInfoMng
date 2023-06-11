@@ -1,0 +1,78 @@
+h1 {
+  color: rgb(43, 105, 219);
+}
+
+.newFont
+{
+  
+  font-family: 'Times New Roman', Times, serif;font-size: 22px;
+  font-size:      40px;
+  font-weight:    bold;
+  color:  rgb(218, 233, 255);
+}
+
+.containers{
+ display: flex;
+ justify-content: center;
+ align-content: center;
+ /*height: 100vh;*/
+}
+
+
+#Title {
+  text-align: center;
+}
+
+#image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
+
+/*Div right*/
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.conSearch,
+.btnsearch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#container-btn {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#search {
+  display: flex;
+  margin-left: 10px;
+}
+
+/* .holder {
+  height: 300px;
+  width: 300px;
+  border: 2px solid black;
+}
+img {
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 300px;
+  min-height: 300px;
+}
+input[type="file"] {
+  margin-top: 5px;
+}
+.heading {
+  font-family: Montserrat;
+  font-size: 45px;
+  color: green;
+} */

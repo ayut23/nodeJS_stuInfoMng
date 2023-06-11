@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Student</title>
+  <!-- <documentation at http://demos.jquerymobile.com/1.4.1/ > -->
+
+  <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+
+  <link rel="stylesheet" href="stylesheets/themes/my-custom-theme.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="javascripts/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+  <!-- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+</head>
+
+<body>
+
+  <!-- Start of  page ------------------------------------------------------------------>
+  <div data-role="page" id="home">
+
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Student</h1>
+<div data-role="navbar" data-theme='b'>
+  <ul>
+    <li><a href="#home">Home Page</a></li>
+    <li><a href="#addStudent">Add Student</a></li>
+    <li><a href="#ListAll">List Students</a></li>
+  </ul>
+</div><!-- /navbar -->
+    </div>
+
+    <!--   page content -->
+    <div data-role="content" data-theme='b'>
+      <div class="newFont">
+        <h2 id = "Title"> Student Information Management System</h2>
+      </div>
+    </div>
+
+    <!--  page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Copyright 2023 by Ayub and Maria</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+
+<!-- Start of  page ------------------------------------------------------------------>
+  <div data-role="page" id="details">
+  
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Here are the details</h1>
+      <div data-role="navbar" data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#addStudent">Add Student</a></li>
+          <li><a href="#ListAll">List Students</a></li>
+  
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+  
+    <!--  content -->
+    <div data-role="content" data-theme='c'>
+      <p> Here are the details</p>
+      <p id="oneName"></p>
+      <p id="oneAge"></p>
+      <p id="oneMajor"></p>
+      <p id="oneEducation"></p>
+      <p id="oneGraduation"></p>
+      <p id="oneURL" hidden></p>
+      <input type="button" value="CTClink" id="CTClink" />
+    </div>
+  
+    <!--    footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Copyright 2023 by Ayub and Maria</h1>
+    </div>
+  
+  </div>
+
+
+<!-- Start of  page ------------------------------------------------------------------>
+  <div data-role="page" id="addStudent">
+    <!--  page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Add a new Student</h1>
+      <div data-role="navbar" data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#addStudent">Add Student</a></li>
+          <li><a href="#ListAll">List Students</a></li>
+        </ul>
+      </div><!-- /navbar -->
+
+    </div>
+
+
+
+
+    <!-- page content -->
+  
+    <div data-role="content" data-theme='c'>
+      <h2>Enter a new Student</h2>
+      Enter Student name <br />
+      <input type="text" value="" id="name" />
+      Enter Student Age <br />
+      <input type="text" value="" id="age" />
+      Enter Student Educational Level  <br />
+      <input type="text" value="" id="education" />
+      Enter expected graduation year <br />
+      <input type="text" value="" id="graduation" />
+      Enter ctc link <br />
+      <input type="text" value="" id="URL" />
+      
+        <div class="ui-field-contain">
+          <label for="select-major">Select a Major</label>
+          <select name="select-major" id="select-major">
+            <option value="Computer Science">Computer Science</option> <!-- same as value before-->
+            <option value="Nursing">Nursing</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+            <option value="Business Management">Business Management</option>
+            <option value="Accounting">Accounting</option>
+            <option value="Art and Humanity">Art and Humanity</option>
+            <option value="Political Science">Political Science</option>
+          </select>
+        </div>
+
+        <!-- <span class="heading">Upload the picture</span>
+        <form>
+            <div class="holder">
+                <img id="imgPreview" src="#" alt="pic" />
+            </div>
+            <input type="file" name="photograph"
+                   id="photo" required="true" />
+        </form> -->
+    
+    
+      <input type="button" value="Click To Add Student info" id="buttonAdd" data-inline="true" />
+      <input type="button" value="Clear Data" id="buttonClear" data-inline="true" />
+    </div>
+
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Copyright 2023 by Ayub and Maria</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+<!-- Start of  page ------------------------------------------------------------------>
+  <div data-role="page" id="ListAll">
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Students List</h1>
+      <div data-role="navbar" data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#addStudent">Add Student</a></li>
+          <li><a href="#ListAll">List Students</a></li>
+        </ul>
+      </div><!-- /navbar -->
+
+    </div>
+    <!--   page content -->
+    <div data-role="content" data-theme='e'>
+      <div id="container">
+          <div class="conSearch">
+              <input type="text" value="" id="search"/>
+              </div>
+          <div class="btnsearch">
+          <input type="button" value="Search" id="buttonSearch" data-inline="true"/>
+          <p id="searchResult"></p>
+              </div>
+      </div>
+
+
+      <p> Here are My Students</p>      
+      <div>
+        <ul id="StudentListul"></ul>
+      </div>
+
+      <input type="button" value="Sort By Major" id="buttonSortMajor" data-inline="true" />
+      <input type="button" value="Sort By Name" id="buttonSortName" data-inline="true" />
+    </div>
+
+
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Copyright 2023 by Ayub and Maria</h1>
+    </div>
+  </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+</body>
+
+</html>
