@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $(":image");
+});
+
 
 let sort = "None";
 
